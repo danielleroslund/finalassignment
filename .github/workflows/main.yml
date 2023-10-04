@@ -1,0 +1,24 @@
+name: Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - '*'
+jobs:
+ test:
+  runs-on: ubuntu-latest
+
+  steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          
+      - name: Build and Test
+        working-directory: ${{github.workspace}}
+        run: |
+          ./gradlew test
