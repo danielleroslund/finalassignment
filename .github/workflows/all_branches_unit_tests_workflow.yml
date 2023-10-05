@@ -19,6 +19,9 @@ jobs:
         java-version: 17
         distribution: 'adopt'
 
+    - name: Make Gradlew Executable
+      run: chmod +x ./gradlew
+
     - name: Run Tests
       working-directory: ${{ github.workspace }}
       run: |
