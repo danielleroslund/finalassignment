@@ -9,7 +9,7 @@ public class ResponsTest {
 
     @Test
     public void testResponseCall() {
-        Respons resp = new Respons("Agnes");
-        assertEquals("Hello, Agnes", resp.getRespons());
+        Respons resp = new Respons("Albin");
+        assertEquals("Hello, Albin", resp.getRespons());
     }
 }
