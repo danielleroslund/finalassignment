@@ -10,6 +10,6 @@ public class ResponsTest {
     @Test
     public void testResponseCall() {
         Respons resp = new Respons("Albin");
-        assertEquals("Hello, FelaktigtNamn", resp.getRespons());
+        assertEquals("Hello, Albin", resp.getRespons());
     }
 }
